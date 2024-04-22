@@ -17,6 +17,7 @@ view.camera.flyTo({
   maximumHeight: 5000, // 相机最大飞行高度
   flyOverLongitude: 100 // 如果到达目的地有2种方式，设置具体值后会强制选择方向飞过这个经度(这个，很好用)});
 });
+
 // 2，缩放(zoom): 使相机向前或向后移动，从而使视野放大或缩小。
 // 缩小
 viewer.camera.zoomOut(500); // 向后移动500米

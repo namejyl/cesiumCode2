@@ -9,7 +9,7 @@ class FogEffect {
 
   constructor(Cesium: any, viewer: any, options: any) {
     this.Cesium = Cesium;
-    if (!viewer) throw new Error("no viewer object!");
+    if (!viewer) throw new Error('no viewer object!');
 
     options = options || {};
     this.visibility = Cesium.defaultValue(options.visibility, 0.1);
@@ -20,7 +20,7 @@ class FogEffect {
   }
 
   private fog(): string {
-    return "uniform sampler2D colorTexture;\n\
+    return 'uniform sampler2D colorTexture;\n\
       uniform sampler2D depthTexture;\n\
       uniform float visibility;\n\
       uniform vec4 fogColor;\n\
@@ -34,12 +34,12 @@ class FogEffect {
           if (f < 0.0) f = 0.0; \n\
           else if (f > 1.0) f = 1.0; \n\
           gl_FragColor = mix(origcolor, fogColor, f); \n\
-      }\n";
+      }\n';
   }
 
   private init(): void {
     this.fogStage = new this.Cesium.PostProcessStage({
-      name: "czml_fog",
+      name: 'czml_fog',
       fragmentShader: this.fog(),
       uniforms: {
         visibility: () => {
@@ -47,8 +47,8 @@ class FogEffect {
         },
         fogColor: () => {
           return this.color;
-        },
-      },
+        }
+      }
     });
     this.viewer.scene.postProcessStages.add(this.fogStage);
   }

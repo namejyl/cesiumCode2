@@ -1,48 +1,48 @@
 class SnowEffect {
-    private Cesium: any = null;
-    private snowSize: any = null;
-    private snowSpeed: any = null;
-    private viewer: any = null;
-    private snowStage: any = null;
-    constructor(Cesium: any, viewer: any, options: any) {
-        this.Cesium = Cesium;
-        if (!viewer) throw new Error("no viewer object!");
-        options = options || {};
-        this.snowSize = Cesium.defaultValue(options.snowSize, 0.02); //最好小于0.02
-        this.snowSpeed = Cesium.defaultValue(options.snowSpeed, 60.0);
-        this.viewer = viewer;
-        this.init();
-    }
-    init() {
-        this.snowStage = new this.Cesium.PostProcessStage({
-            name: "czml_snow",
-            fragmentShader: this.snow(),
-            uniforms: {
-                snowSize: () => {
-                    return this.snowSize;
-                },
-                snowSpeed: () => {
-                    return this.snowSpeed;
-                },
-            },
-        });
-        this.viewer.scene.postProcessStages.add(this.snowStage);
-    }
-    //销毁对象
-    destroy() {
-        if (!this.viewer || !this.snowStage) return;
-        this.viewer.scene.postProcessStages.remove(this.snowStage);
-        this.snowStage.destroy();
-        delete this.snowSize;
-        delete this.snowSpeed;
-    }
-    //控制显示
-    show(visible: any) {
-        this.snowStage.enabled = visible;
-    }
-    //CLML对象，方便导出使用
-    snow() {
-        return "uniform sampler2D colorTexture;\n\
+  private Cesium: any = null;
+  private snowSize: any = null;
+  private snowSpeed: any = null;
+  private viewer: any = null;
+  private snowStage: any = null;
+  constructor(Cesium: any, viewer: any, options: any) {
+    this.Cesium = Cesium;
+    if (!viewer) throw new Error('no viewer object!');
+    options = options || {};
+    this.snowSize = Cesium.defaultValue(options.snowSize, 0.02); //最好小于0.02
+    this.snowSpeed = Cesium.defaultValue(options.snowSpeed, 60.0);
+    this.viewer = viewer;
+    this.init();
+  }
+  init() {
+    this.snowStage = new this.Cesium.PostProcessStage({
+      name: 'czml_snow',
+      fragmentShader: this.snow(),
+      uniforms: {
+        snowSize: () => {
+          return this.snowSize;
+        },
+        snowSpeed: () => {
+          return this.snowSpeed;
+        }
+      }
+    });
+    this.viewer.scene.postProcessStages.add(this.snowStage);
+  }
+  //销毁对象
+  destroy() {
+    if (!this.viewer || !this.snowStage) return;
+    this.viewer.scene.postProcessStages.remove(this.snowStage);
+    this.snowStage.destroy();
+    delete this.snowSize;
+    delete this.snowSpeed;
+  }
+  //控制显示
+  show(visible: any) {
+    this.snowStage.enabled = visible;
+  }
+  //CLML对象，方便导出使用
+  snow() {
+    return 'uniform sampler2D colorTexture;\n\
           varying vec2 v_textureCoordinates;\n\
           uniform float snowSpeed;\n\
                   uniform float snowSize;\n\
@@ -72,7 +72,7 @@ class SnowEffect {
               finalColor=(vec3(c));\n\
               gl_FragColor=mix(texture2D(colorTexture,v_textureCoordinates),vec4(finalColor,1),.5);\n\
               }\n\
-              ";
-    }
+              ';
+  }
 }
 export default SnowEffect;

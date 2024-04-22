@@ -1,4 +1,4 @@
-const drawMapFN = async (obj: any) => {
+const drawMapFN = async obj => {
   window.drawHelperDf.removeAll(); //重置场景
   window.earth.entities.removeAll();
   for (let i in markerDataAll) {
