@@ -1,5 +1,5 @@
 /**
- * 底图切换
+ * 底图瓦片
  */
 const baseMapSwitchFn = async type => {
   // 假设新底图图层的URL和Credit是已知的
