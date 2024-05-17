@@ -18,7 +18,7 @@ import SaveOutImg from './SaveOutImg.ts';
 import RotateEntity from './RotateEntity.ts';
 import RoadShuttle from './RoadShuttle.ts';
 import RoadFlashing from './RoadFlashing.ts';
-const CesiumMap = {
+const CesiumMap: any = {
   AddTiandituWmts,
   AddXyz,
   Add3DTileset,
