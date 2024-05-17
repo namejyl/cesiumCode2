@@ -149,15 +149,18 @@ const listData = reactive<any>([
     children: [
       {
         value: '旋转实体',
-        label: '旋转实体'
+        label: '旋转实体',
+        code: 'RotateEntity'
       },
       {
         value: '道路流动线效果',
-        label: '道路流动线效果'
+        label: '道路流动线效果',
+        code: 'RoadShuttle'
       },
       {
         value: '道路闪烁线效果',
-        label: '道路闪烁线效果'
+        label: '道路闪烁线效果',
+        code: 'RoadFlashing'
       },
       {
         value: '竖直飞线效果',

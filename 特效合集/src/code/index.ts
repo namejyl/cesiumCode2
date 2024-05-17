@@ -15,6 +15,9 @@ import InitColorfulRectEarth from './InitColorfulRectEarth.ts';
 import SetBackground from './SetBackground.ts';
 import CustomSkyBox from './CustomSkyBox.ts';
 import SaveOutImg from './SaveOutImg.ts';
+import RotateEntity from './RotateEntity.ts';
+import RoadShuttle from './RoadShuttle.ts';
+import RoadFlashing from './RoadFlashing.ts';
 const CesiumMap = {
   AddTiandituWmts,
   AddXyz,
@@ -32,6 +35,9 @@ const CesiumMap = {
   InitColorfulRectEarth,
   SetBackground,
   CustomSkyBox,
-  SaveOutImg
+  SaveOutImg,
+  RotateEntity,
+  RoadShuttle,
+  RoadFlashing
 };
 export default CesiumMap;
