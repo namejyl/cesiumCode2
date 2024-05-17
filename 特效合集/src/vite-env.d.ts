@@ -5,6 +5,7 @@ declare global {
   interface Window {
     Cesium: any;
     Viewer: any;
+    viewer: any;
     tiandituToken: any;
   }
 }

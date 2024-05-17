@@ -17,29 +17,32 @@ let viewer;
 onMounted(() => {
   // let key = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJiYjUwNWQyOC0yZmZhLTRmMzItOTQyZC02ZmQyMWIyMTA3NmEiLCJpZCI6NjcyNzcsImlhdCI6MTY2ODE1ODc2Mn0.t1h6-ZADkGnZUZZoLtrlgtTp8_MR2Kxfhew42ksDgmk';
   // Cesium.Ion.defaultAccessToken = key;
-  viewer = window.Viewer = new Cesium.Viewer('cesiumContainer', {
-    imageryProvider: new Cesium.ArcGisMapServerImageryProvider({
-      url: 'https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer'
-    }),
-    contextOptions: {
-      webgl: {
-        alpha: true
-      }
-    },
-    // terrainProvider: Cesium.createWorldTerrain(),
-    geocoder: true,
-    homeButton: true,
-    sceneModePicker: true,
-    baseLayerPicker: true,
-    navigationHelpButton: true,
-    animation: true,
-    timeline: true,
-    fullscreenButton: false,
-    vrButton: false,
-    //关闭点选出现的提示框
-    selectionIndicator: false,
-    infoBox: false
-  });
+  viewer =
+    window.viewer =
+    window.Viewer =
+      new Cesium.Viewer('cesiumContainer', {
+        imageryProvider: new Cesium.ArcGisMapServerImageryProvider({
+          url: 'https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer'
+        }),
+        contextOptions: {
+          webgl: {
+            alpha: true
+          }
+        },
+        // terrainProvider: Cesium.createWorldTerrain(),
+        geocoder: true,
+        homeButton: true,
+        sceneModePicker: true,
+        baseLayerPicker: true,
+        navigationHelpButton: true,
+        animation: true,
+        timeline: true,
+        fullscreenButton: false,
+        vrButton: false,
+        //关闭点选出现的提示框
+        selectionIndicator: false,
+        infoBox: false
+      });
   viewer.scene.debugShowFramesPerSecond = true;
   // 关闭深度检测
   viewer.scene.globe.depthTestAgainstTerrain = false;
