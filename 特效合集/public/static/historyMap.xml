@@ -1,0 +1,16 @@
+<Layer xmlns:ows="http://www.opengis.net/ows/1.1">
+  <ows:Title>三國歷史地圖(Sanguo)</ows:Title>
+  <ows:Identifier>ad0262</ows:Identifier>
+  <ows:WGS84BoundingBox crs="urn:ogc:def:crs:OGC:2:84">
+    <ows:LowerCorner>70.433 15.957</ows:LowerCorner>
+    <ows:UpperCorner>142.271 57.96</ows:UpperCorner>
+  </ows:WGS84BoundingBox>
+  <Style isDefault="true">
+    <ows:Identifier>default</ows:Identifier>
+  </Style>
+  <Format>image/png</Format>
+  <TileMatrixSetLink>
+    <TileMatrixSet>GoogleMapsCompatible</TileMatrixSet>
+  </TileMatrixSetLink>
+  <ResourceURL format="image/png" resourceType="tile" template="https://gis.sinica.edu.tw/ccts/file-exists.php?img=ad0262-png-{TileMatrix}-{TileCol}-{TileRow}"/>
+</Layer>

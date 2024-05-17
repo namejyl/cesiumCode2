@@ -6,17 +6,14 @@ class RainEffect {
   private rainSpeed: any = null;
   private viewer: any = null;
   private rainStage: any = null;
-
   constructor(Cesium: any, viewer: any, options: any) {
     this.Cesium = Cesium;
     if (!viewer) throw new Error('no viewer object!');
-
     options = options || {};
-    this.tiltAngle = Cesium.defaultValue(options.tiltAngle, -0.6); //倾斜角度，负数向右，正数向左
-    this.rainSize = Cesium.defaultValue(options.rainSize, 0.1); //雨大小
-    this.rainSpeed = Cesium.defaultValue(options.rainSpeed, 1000.0); //雨速
+    this.tiltAngle = Cesium.defaultValue(options.tiltAngle, -0.6); // 倾斜角度，负数向右，正数向左
+    this.rainSize = Cesium.defaultValue(options.rainSize, 0.1); // 雨大小
+    this.rainSpeed = Cesium.defaultValue(options.rainSpeed, 1000.0); // 雨速
     this.viewer = viewer;
-
     this.init();
   }
   //CLML对象，方便导出使用
@@ -45,7 +42,6 @@ class RainEffect {
             }\n\
             ';
   }
-
   init(): void {
     this.rainStage = new this.Cesium.PostProcessStage({
       name: 'czml_rain',
