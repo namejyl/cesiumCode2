@@ -18,6 +18,9 @@ import SaveOutImg from './SaveOutImg.ts';
 import RotateEntity from './RotateEntity.ts';
 import RoadShuttle from './RoadShuttle.ts';
 import RoadFlashing from './RoadFlashing.ts';
+import LineFlowInit from './LineFlowInit.ts';
+import ParabolaFlowInit from './ParabolaFlowInit.ts';
+import SurfaceElementStretching from './SurfaceElementStretching.ts';
 const CesiumMap: any = {
   AddTiandituWmts,
   AddXyz,
@@ -38,6 +41,9 @@ const CesiumMap: any = {
   SaveOutImg,
   RotateEntity,
   RoadShuttle,
-  RoadFlashing
+  RoadFlashing,
+  LineFlowInit,
+  ParabolaFlowInit,
+  SurfaceElementStretching
 };
 export default CesiumMap;

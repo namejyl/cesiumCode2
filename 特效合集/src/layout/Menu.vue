@@ -164,15 +164,18 @@ const listData = reactive<any>([
       },
       {
         value: '竖直飞线效果',
-        label: '竖直飞线效果'
+        label: '竖直飞线效果',
+        code: 'LineFlowInit'
       },
       {
         value: '抛物流动飞线效果',
-        label: '抛物流动飞线效果'
+        label: '抛物流动飞线效果',
+        code: 'ParabolaFlowInit'
       },
       {
         value: '面状要素的立体拉伸效果',
-        label: '面状要素的立体拉伸效果'
+        label: '面状要素的立体拉伸效果',
+        code: 'SurfaceElementStretching'
       },
       {
         value: '六边形扩散效果',
