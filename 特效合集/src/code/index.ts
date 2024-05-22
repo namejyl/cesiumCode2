@@ -21,6 +21,11 @@ import RoadFlashing from './RoadFlashing.ts';
 import LineFlowInit from './LineFlowInit.ts';
 import ParabolaFlowInit from './ParabolaFlowInit.ts';
 import SurfaceElementStretching from './SurfaceElementStretching.ts';
+import HexagonDiffusion from './HexagonDiffusion.ts';
+import FlowingWaterSurface from './FlowingWaterSurface.ts';
+import DrawWall from './DrawWall.ts';
+import DynamicWall from './DynamicWall.ts';
+import FlowWall from './FlowWall.ts';
 const CesiumMap: any = {
   AddTiandituWmts,
   AddXyz,
@@ -44,6 +49,11 @@ const CesiumMap: any = {
   RoadFlashing,
   LineFlowInit,
   ParabolaFlowInit,
-  SurfaceElementStretching
+  SurfaceElementStretching,
+  HexagonDiffusion,
+  FlowingWaterSurface,
+  DrawWall,
+  DynamicWall,
+  FlowWall
 };
 export default CesiumMap;

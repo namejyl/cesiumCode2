@@ -4,13 +4,13 @@
       <div id="slider"></div>
     </div>
     <div id="eye"></div>
-    <!-- <PlottingTool v-if="PlottingToolShow"></PlottingTool> -->
+    <PlottingTool v-if="PlottingToolShow"></PlottingTool>
   </div>
 </template>
 
 <script lang="ts" setup>
 import { onMounted, ref } from 'vue';
-// import PlottingTool from '../components/PlottingTool.vue';
+import PlottingTool from '../components/PlottingTool.vue';
 const Cesium = window.Cesium;
 const PlottingToolShow = ref(false);
 let viewer;

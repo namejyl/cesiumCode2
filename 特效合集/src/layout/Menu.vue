@@ -179,23 +179,28 @@ const listData = reactive<any>([
       },
       {
         value: '六边形扩散效果',
-        label: '六边形扩散效果'
+        label: '六边形扩散效果',
+        code: 'HexagonDiffusion'
       },
       {
         value: '动态流动水面',
-        label: '动态流动水面'
+        label: '动态流动水面',
+        code: 'FlowingWaterSurface'
       },
       {
         value: '加载Polygon绘制墙',
-        label: '加载Polygon绘制墙'
+        label: '加载Polygon绘制墙',
+        code: 'DrawWall'
       },
       {
         value: '动态立体墙效果',
-        label: '动态立体墙效果'
+        label: '动态立体墙效果',
+        code: 'DynamicWall'
       },
       {
         value: '动态流动墙体效果',
-        label: '动态流动墙体效果'
+        label: '动态流动墙体效果',
+        code: 'FlowWall'
       },
       {
         value: '动态扩散墙效果',
@@ -436,6 +441,7 @@ const listData = reactive<any>([
   }
 ]);
 const SettingCesiumFn = async (code: any) => {
+  console.log('2222222222', code);
   CesiumMap[code]();
 };
 </script>
