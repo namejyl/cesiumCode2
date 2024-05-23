@@ -45,6 +45,13 @@ import RippleRadar from './RippleRadar.ts';
 import PictureRadar from './PictureRadar.ts';
 import RadarScanning from './RadarScanning.ts';
 import StereoRadarScanning from './StereoRadarScanning.ts';
+import TrajectorySphere from './TrajectorySphere.ts';
+import ArcSphere from './ArcSphere.ts';
+import Billboard from './Billboard.ts';
+import AddCesium3DTileset2 from './AddCesium3DTileset2.ts';
+import AddCesiumglb from './AddCesiumglb.ts';
+import TrajectoryMovement from './TrajectoryMovement.ts';
+import PointClustering from './PointClustering.ts';
 const CesiumMap: any = {
   AddTiandituWmts,
   AddXyz,
@@ -92,6 +99,13 @@ const CesiumMap: any = {
   RippleRadar,
   PictureRadar,
   RadarScanning,
-  StereoRadarScanning
+  StereoRadarScanning,
+  TrajectorySphere,
+  ArcSphere,
+  Billboard,
+  AddCesium3DTileset2,
+  AddCesiumglb,
+  TrajectoryMovement,
+  PointClustering
 };
 export default CesiumMap;

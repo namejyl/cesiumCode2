@@ -311,31 +311,38 @@ const listData = reactive<any>([
     children: [
       {
         value: '轨迹球体效果',
-        label: '轨迹球体效果'
+        label: '轨迹球体效果',
+        code: 'TrajectorySphere'
       },
       {
         value: '电弧球体效果',
-        label: '电弧球体效果'
+        label: '电弧球体效果',
+        code: 'ArcSphere'
       },
       {
         value: '广告牌效果',
-        label: '广告牌效果'
+        label: '广告牌效果',
+        code: 'Billboard'
       },
       {
         value: '3D Tiles(建筑物渐变和动态光环)',
-        label: '3D Tiles(建筑物渐变和动态光环)'
+        label: '3D Tiles(建筑物渐变和动态光环)',
+        code: 'AddCesium3DTileset2'
       },
       {
         value: 'glb模型(键盘控制模型姿态)',
-        label: 'glb模型(键盘控制模型姿态)'
+        label: 'glb模型(键盘控制模型姿态)',
+        code: 'AddCesiumglb'
       },
       {
         value: 'glb模型(轨迹移动)',
-        label: 'glb模型(轨迹移动)'
+        label: 'glb模型(轨迹移动)',
+        code: 'TrajectoryMovement'
       },
       {
         value: '点聚合',
-        label: '点聚合'
+        label: '点聚合',
+        code: 'PointClustering'
       }
     ]
   },
