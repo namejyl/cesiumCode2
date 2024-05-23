@@ -26,6 +26,7 @@ import FlowingWaterSurface from './FlowingWaterSurface.ts';
 import DrawWall from './DrawWall.ts';
 import DynamicWall from './DynamicWall.ts';
 import FlowWall from './FlowWall.ts';
+import DiffusionWall from './DiffusionWall.ts';
 const CesiumMap: any = {
   AddTiandituWmts,
   AddXyz,
@@ -54,6 +55,7 @@ const CesiumMap: any = {
   FlowingWaterSurface,
   DrawWall,
   DynamicWall,
-  FlowWall
+  FlowWall,
+  DiffusionWall
 };
 export default CesiumMap;

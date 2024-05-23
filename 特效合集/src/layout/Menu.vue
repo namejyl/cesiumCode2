@@ -204,7 +204,8 @@ const listData = reactive<any>([
       },
       {
         value: '动态扩散墙效果',
-        label: '动态扩散墙效果'
+        label: '动态扩散墙效果',
+        code: 'DiffusionWall'
       },
       {
         value: '正多边形扩散墙效果',
