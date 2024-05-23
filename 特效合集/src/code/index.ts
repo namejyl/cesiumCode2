@@ -29,6 +29,10 @@ import FlowWall from './FlowWall.ts';
 import DiffusionWall from './DiffusionWall.ts';
 import RegularPolygonDiffusionWall from './RegularPolygonDiffusionWall.ts';
 import GradientFloodWall from './GradientFloodWall.ts';
+import RotateCircle from './RotateCircle.ts';
+import ScanningCircle from './ScanningCircle.ts';
+import WavyCircle from './WavyCircle.ts';
+import DiffusionCircle from './DiffusionCircle.ts';
 const CesiumMap: any = {
   AddTiandituWmts,
   AddXyz,
@@ -60,6 +64,10 @@ const CesiumMap: any = {
   FlowWall,
   DiffusionWall,
   RegularPolygonDiffusionWall,
-  GradientFloodWall
+  GradientFloodWall,
+  RotateCircle,
+  ScanningCircle,
+  WavyCircle,
+  DiffusionCircle
 };
 export default CesiumMap;

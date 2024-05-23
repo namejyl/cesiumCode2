@@ -225,19 +225,23 @@ const listData = reactive<any>([
     children: [
       {
         value: '旋转圆',
-        label: '旋转圆'
+        label: '旋转圆',
+        code: 'RotateCircle'
       },
       {
         value: '扫描圆',
-        label: '扫描圆'
+        label: '扫描圆',
+        code: 'ScanningCircle'
       },
       {
         value: '波纹圆',
-        label: '波纹圆'
+        label: '波纹圆',
+        code: 'WavyCircle'
       },
       {
         value: '扩散圆',
-        label: '扩散圆'
+        label: '扩散圆',
+        code: 'DiffusionCircle'
       },
       {
         value: '消隐圆',
