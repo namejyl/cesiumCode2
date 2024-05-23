@@ -245,59 +245,63 @@ const listData = reactive<any>([
       },
       {
         value: '消隐圆',
-        label: '消隐圆'
+        label: '消隐圆',
+        code: 'BlankingCircle'
       },
       {
         value: '模糊圆',
-        label: '模糊圆'
+        label: '模糊圆',
+        code: 'FuzzyCircle'
       },
       {
         value: '螺旋圆',
-        label: '螺旋圆'
+        label: '螺旋圆',
+        code: 'SpiralCircle'
       },
       {
         value: '多彩圆',
-        label: '多彩圆'
+        label: '多彩圆',
+        code: 'MulticoloredCircle'
       },
       {
         value: '脉冲圆',
-        label: '脉冲圆'
+        label: '脉冲圆',
+        code: 'PulseCircle'
       },
       {
         value: '水波纹扩散效果',
-        label: '水波纹扩散效果'
-      },
-      {
-        value: '圆扩散效果',
-        label: '圆扩散效果'
+        label: '水波纹扩散效果',
+        code: 'WaterRippleDiffusion'
       },
       {
         value: '线圈发光效果',
-        label: '线圈发光效果'
-      },
-      {
-        value: '雷达平扫效果',
-        label: '雷达平扫效果'
+        label: '线圈发光效果',
+        code: 'CoilLuminescence'
       },
       {
         value: '雷达线效果',
-        label: '雷达线效果'
+        label: '雷达线效果',
+        code: 'RadarLine'
       },
       {
         value: '波纹雷达效果',
-        label: '波纹雷达效果'
+        label: '波纹雷达效果',
+        code: 'RippleRadar'
       },
       {
         value: '图片雷达效果',
-        label: '图片雷达效果'
+        label: '图片雷达效果',
+        code: 'PictureRadar'
       },
       {
         value: '雷达扫描效果2',
-        label: '雷达扫描效果2'
+        label: '雷达扫描效果2',
+        code: 'RadarScanning'
       },
       {
         value: '立体雷达扫描效果',
-        label: '立体雷达扫描效果'
+        label: '立体雷达扫描效果',
+        code: 'StereoRadarScanning'
       }
     ]
   },

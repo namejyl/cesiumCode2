@@ -33,6 +33,18 @@ import RotateCircle from './RotateCircle.ts';
 import ScanningCircle from './ScanningCircle.ts';
 import WavyCircle from './WavyCircle.ts';
 import DiffusionCircle from './DiffusionCircle.ts';
+import BlankingCircle from './BlankingCircle.ts';
+import FuzzyCircle from './FuzzyCircle.ts';
+import SpiralCircle from './SpiralCircle.ts';
+import MulticoloredCircle from './MulticoloredCircle.ts';
+import PulseCircle from './PulseCircle.ts';
+import WaterRippleDiffusion from './WaterRippleDiffusion.ts';
+import CoilLuminescence from './CoilLuminescence.ts';
+import RadarLine from './RadarLine.ts';
+import RippleRadar from './RippleRadar.ts';
+import PictureRadar from './PictureRadar.ts';
+import RadarScanning from './RadarScanning.ts';
+import StereoRadarScanning from './StereoRadarScanning.ts';
 const CesiumMap: any = {
   AddTiandituWmts,
   AddXyz,
@@ -68,6 +80,18 @@ const CesiumMap: any = {
   RotateCircle,
   ScanningCircle,
   WavyCircle,
-  DiffusionCircle
+  DiffusionCircle,
+  BlankingCircle,
+  FuzzyCircle,
+  SpiralCircle,
+  MulticoloredCircle,
+  PulseCircle,
+  WaterRippleDiffusion,
+  CoilLuminescence,
+  RadarLine,
+  RippleRadar,
+  PictureRadar,
+  RadarScanning,
+  StereoRadarScanning
 };
 export default CesiumMap;
