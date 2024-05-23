@@ -27,6 +27,8 @@ import DrawWall from './DrawWall.ts';
 import DynamicWall from './DynamicWall.ts';
 import FlowWall from './FlowWall.ts';
 import DiffusionWall from './DiffusionWall.ts';
+import RegularPolygonDiffusionWall from './RegularPolygonDiffusionWall.ts';
+import GradientFloodWall from './GradientFloodWall.ts';
 const CesiumMap: any = {
   AddTiandituWmts,
   AddXyz,
@@ -56,6 +58,8 @@ const CesiumMap: any = {
   DrawWall,
   DynamicWall,
   FlowWall,
-  DiffusionWall
+  DiffusionWall,
+  RegularPolygonDiffusionWall,
+  GradientFloodWall
 };
 export default CesiumMap;

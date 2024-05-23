@@ -209,11 +209,13 @@ const listData = reactive<any>([
       },
       {
         value: '正多边形扩散墙效果',
-        label: '正多边形扩散墙效果'
+        label: '正多边形扩散墙效果',
+        code: 'RegularPolygonDiffusionWall'
       },
       {
         value: '立体墙（垂直、水平）渐变泛光效果',
-        label: '立体墙（垂直、水平）渐变泛光效果'
+        label: '立体墙（垂直、水平）渐变泛光效果',
+        code: 'GradientFloodWall'
       }
     ]
   },
