@@ -1,6 +1,6 @@
 const Cesium = window.Cesium;
 const Add3DTileset = () => {
-  let viewer = window.Viewer;
+  let viewer = window.viewer;
   let tileSetModel = new Cesium.Cesium3DTileset({
     url: '/static/3DT/dayanta/tileset.json'
   });

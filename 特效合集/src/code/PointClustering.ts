@@ -7,7 +7,6 @@ const PointClustering = () => {
     let y = 36.185321 + Math.random() * 0.1;
     pointArray.push([x, y]);
   }
-
   /**
    * 点聚合
    * @param {Array} pointArray 点位数组
@@ -25,7 +24,7 @@ const PointClustering = () => {
   // 点
   for (let i = 0; i < pointArray.length; ++i) {
     dataSource.entities.add({
-      position: Cesium.Cartesian3.fromDegrees(pointArray[i][0], pointArray[i][1], 1000),
+      position: Cesium.Cartesian3.fromDegrees(pointArray[i][0], pointArray[i][1], 0),
       // point: {
       //     color: Cesium.Color.RED,
       // },
@@ -47,13 +46,13 @@ const PointClustering = () => {
     });
   }
   const dataSourcePromise = viewer.dataSources.add(dataSource);
-  dataSourcePromise.then(function (dataSource) {
+  dataSourcePromise.then(function (dataSource: any) {
     // 设置聚合参数
     dataSource.clustering.enabled = true;
     dataSource.clustering.pixelRange = 60;
     dataSource.clustering.minimumClusterSize = 2;
     // 添加监听函数
-    dataSource.clustering.clusterEvent.addEventListener(function (clusteredEntities, cluster) {
+    dataSource.clustering.clusterEvent.addEventListener(function (clusteredEntities: any, cluster: any) {
       cluster.label.show = false;
       cluster.billboard.show = true;
       cluster.billboard.id = cluster.label.id;
@@ -74,38 +73,5 @@ const PointClustering = () => {
       }
     });
   });
-  /**
-   * @description: 将图片和文字合成新图标使用（参考Cesium源码）
-   * @param {*} url：图片地址
-   * @param {*} label：文字
-   * @param {*} size：画布大小
-   * @return {*} 返回canvas
-   */
-  function combineIconAndLabel(url, label, size) {
-    // 创建画布对象
-    let canvas = document.createElement('canvas');
-    canvas.width = size;
-    canvas.height = size;
-    let ctx = canvas.getContext('2d');
-    let promise = new Cesium.Resource.fetchImage(url).then(image => {
-      // 异常判断
-      try {
-        ctx.drawImage(image, 0, 0);
-      } catch (e) {
-        console.log(e);
-      }
-
-      // 渲染字体
-      // font属性设置顺序：font-style, font-variant, font-weight, font-size, line-height, font-family
-      ctx.fillStyle = Cesium.Color.WHITE.toCssColorString();
-      ctx.font = 'bold 20px Microsoft YaHei';
-      ctx.textAlign = 'center';
-      ctx.textBaseline = 'middle';
-      ctx.fillText(label, size / 2, size / 2);
-
-      return canvas;
-    });
-    return promise;
-  }
 };
 export default PointClustering;

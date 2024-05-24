@@ -61,6 +61,7 @@ onMounted(() => {
   width: 100%;
   height: 100%;
   background: url('https://t11.baidu.com/it/u=1152680588,219410869&fm=30&app=106&f=JPEG?w=640&h=458&s=F93A7EDBC4E64D1563A5E31A03006057') no-repeat;
+  background-size: 100% 100%;
   .my-Select {
     position: absolute;
     margin: 10px;
