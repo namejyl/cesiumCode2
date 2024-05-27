@@ -2,7 +2,6 @@ const Cesium = window.Cesium;
 const AddTiandituWmts = () => {
   let x = 117.141411;
   let y = 36.19;
-  let z = 0;
   window.viewer.camera.flyTo({
     destination: Cesium.Cartesian3.fromDegrees(x, y, 15000.0), // 设置位置
     orientation: {
