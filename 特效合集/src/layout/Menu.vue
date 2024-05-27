@@ -352,7 +352,8 @@ const listData = reactive<any>([
     children: [
       {
         value: '淹没分析',
-        label: '淹没分析'
+        label: '淹没分析',
+        code: '淹没分析'
       },
       {
         value: '通视分析',
