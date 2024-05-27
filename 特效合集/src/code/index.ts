@@ -52,6 +52,9 @@ import AddCesium3DTileset2 from './AddCesium3DTileset2.ts';
 import AddCesiumglb from './AddCesiumglb.ts';
 import TrajectoryMovement from './TrajectoryMovement.ts';
 import PointClustering from './PointClustering.ts';
+import InduationAnalysis from './InduationAnalysis.ts';
+import VisibilityAnalysis from './VisibilityAnalysis.ts';
+import ViewshedAnalysis from './ViewshedAnalysis.ts';
 const CesiumMap: any = {
   AddTiandituWmts,
   AddXyz,
@@ -106,6 +109,9 @@ const CesiumMap: any = {
   AddCesium3DTileset2,
   AddCesiumglb,
   TrajectoryMovement,
-  PointClustering
+  PointClustering,
+  InduationAnalysis,
+  VisibilityAnalysis,
+  ViewshedAnalysis
 };
 export default CesiumMap;

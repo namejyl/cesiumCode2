@@ -7782,7 +7782,6 @@ return material;
     //右键点击操作
     handler.setInputAction(function (click) {
       let cartesian = viewer.camera.pickEllipsoid(click.position, viewer.scene.globe.ellipsoid);
-
       if (cartesian) {
         let tempLength = tempPoints.length;
         if (tempLength < 3) {
@@ -7810,7 +7809,6 @@ return material;
     var maxHeights = [];
     var minHeights = [];
     var wellWall = [];
-
     for (let i = 0; i < points_.length - 1; i++) {
       points.push(Cesium.Cartesian3.fromDegrees(points_[i][0], points_[i][1]));
       pointHeights.push(points_[i][0], points_[i][1]);
@@ -7871,23 +7869,19 @@ return material;
       asynchronous: !1
     })),
       this.viewer.scene.primitives.add(wellWall);
-
     let pointsLength = points.length;
     let clippingPlanes = []; // 存储ClippingPlane集合
     for (let i = 0; i < pointsLength; ++i) {
       let nextIndex = (i + 1) % pointsLength;
       let midpoint = Cesium.Cartesian3.add(points[i], points[nextIndex], new Cesium.Cartesian3());
       midpoint = Cesium.Cartesian3.multiplyByScalar(midpoint, 0.5, midpoint);
-
       let up = Cesium.Cartesian3.normalize(midpoint, new Cesium.Cartesian3());
       let right = Cesium.Cartesian3.subtract(points[nextIndex], midpoint, new Cesium.Cartesian3());
       right = Cesium.Cartesian3.normalize(right, right);
-
       let normal = Cesium.Cartesian3.cross(right, up, new Cesium.Cartesian3());
       normal = Cesium.Cartesian3.normalize(normal, normal);
       let originCenteredPlane = new Cesium.Plane(normal, 0.0);
       let distance = Cesium.Plane.getPointDistance(originCenteredPlane, midpoint);
-
       clippingPlanes.push(new Cesium.ClippingPlane(normal, distance));
     }
     return clippingPlanes;

@@ -353,15 +353,17 @@ const listData = reactive<any>([
       {
         value: '淹没分析',
         label: '淹没分析',
-        code: '淹没分析'
+        code: 'InduationAnalysis'
       },
       {
         value: '通视分析',
-        label: '通视分析'
+        label: '通视分析',
+        code: 'VisibilityAnalysis'
       },
       {
         value: '可视域分析',
-        label: '可视域分析'
+        label: '可视域分析',
+        code: 'ViewshedAnalysis'
       },
       {
         value: '等高线',
