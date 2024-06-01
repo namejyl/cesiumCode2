@@ -1,5 +1,5 @@
 const Cesium = window.Cesium;
-const Add3DTileset = async () => {
+export default async () => {
   let viewer = window.viewer;
   const tileset = await Cesium.Cesium3DTileset.fromUrl('/static/3DT/dayanta/tileset.json');
   viewer.scene.primitives.add(tileset);
@@ -8,4 +8,3 @@ const Add3DTileset = async () => {
   });
   viewer.zoomTo(tileset);
 };
-export default Add3DTileset;
