@@ -132,12 +132,13 @@ function ParabolaFlowInitFn(center: any, num: any) {
       });
     }
     // 创建轨迹线
-    viewer.entities.add({
+    let entity = viewer.entities.add({
       polyline: {
         positions: _siglePositions,
         material: new Cesium.Color(1.0, 1.0, 0.0, 0.2)
       }
     });
+    viewer.zoomTo(entity);
   });
 
   /**
@@ -183,13 +184,4 @@ function ParabolaFlowInitFn(center: any, num: any) {
     }
     return result;
   }
-  viewer.camera.flyTo({
-    destination: Cesium.Cartesian3.fromDegrees(117.123076, 36.214848, 15000.0), // 设置位置
-    orientation: {
-      heading: Cesium.Math.toRadians(20.0),
-      pitch: Cesium.Math.toRadians(-90.0),
-      roll: 0
-    },
-    duration: 5
-  });
 }

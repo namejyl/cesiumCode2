@@ -3,15 +3,6 @@ const AddTiandituWmts = () => {
   let x = 117.141411;
   let y = 36.19;
   let z = 0;
-  window.viewer.camera.flyTo({
-    destination: Cesium.Cartesian3.fromDegrees(x, y, 15000.0), // 设置位置
-    orientation: {
-      heading: Cesium.Math.toRadians(20.0),
-      pitch: Cesium.Math.toRadians(-90.0),
-      roll: 0
-    },
-    duration: 5
-  });
   class RadarWaveMaterialProperty {
     constructor(options) {
       this._definitionChanged = new Cesium.Event();
@@ -101,7 +92,7 @@ return material;
   });
 
   // 波纹雷达
-  window.viewer.entities.add({
+  let entity = window.viewer.entities.add({
     position: Cesium.Cartesian3.fromDegrees(x, y),
     id: 'radarWave',
     name: '波纹雷达',
@@ -114,5 +105,6 @@ return material;
       })
     }
   });
+  viewer.zoomTo(entity);
 };
 export default AddTiandituWmts;

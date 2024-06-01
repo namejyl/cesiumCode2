@@ -1,3 +1,3 @@
 const Cesium = window.Cesium;
-const VisibilityAnalysis = async () => {};
+const VisibilityAnalysis = () => {};
 export default VisibilityAnalysis;

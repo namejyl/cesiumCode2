@@ -16,15 +16,6 @@ const FlowingWaterSurface = () => {
     })
     .then(() => {
       FlowingWaterSurfaceFn(waterData);
-      window.viewer.camera.flyTo({
-        destination: Cesium.Cartesian3.fromDegrees(117.233478, 36.309579, 15000.0), // 设置位置
-        orientation: {
-          heading: Cesium.Math.toRadians(20.0),
-          pitch: Cesium.Math.toRadians(-90.0),
-          roll: 0
-        },
-        duration: 5
-      });
     });
 };
 export default FlowingWaterSurface;
@@ -69,5 +60,7 @@ function FlowingWaterSurfaceFn(data) {
       })
     })
   });
+  viewer.zoomTo(waterPrimitive);
+
   viewer.scene.groundPrimitives.add(waterPrimitive);
 }

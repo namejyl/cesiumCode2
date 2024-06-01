@@ -153,7 +153,7 @@ const HexagonDiffusion = () => {
       super.add(position, color, maxRadius, duration, isedit);
       const _this = this;
       let currentRadius = 1;
-      this.viewer.entities.add({
+      let entity = this.viewer.entities.add({
         id: _this.id,
         position: Cesium.Cartesian3.fromDegrees(position[0], position[1], position[2]),
         ellipse: {
@@ -170,19 +170,11 @@ const HexagonDiffusion = () => {
           material: new Cesium.HexagonSpreadMaterialProperty(new Cesium.Color.fromCssColorString(color))
         }
       });
+      viewer.zoomTo(entity);
     }
   }
   // 六边形扩散
   const hexagonSpread1 = new HexagonSpread(window.viewer, 'hexagonSpred1');
   hexagonSpread1.add([113.934, 22.552, 0], '#0099BF', 1000, 7500);
-  window.viewer.camera.flyTo({
-    destination: Cesium.Cartesian3.fromDegrees(113.934, 22.552, 15000.0), // 设置位置
-    orientation: {
-      heading: Cesium.Math.toRadians(20.0),
-      pitch: Cesium.Math.toRadians(-90.0),
-      roll: 0
-    },
-    duration: 5
-  });
 };
 export default HexagonDiffusion;

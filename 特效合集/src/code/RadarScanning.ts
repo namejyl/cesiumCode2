@@ -3,15 +3,6 @@ const AddTiandituWmts = () => {
   let x = 117.141411;
   let y = 36.19;
   let z = 0;
-  window.viewer.camera.flyTo({
-    destination: Cesium.Cartesian3.fromDegrees(x, y, 15000.0), // 设置位置
-    orientation: {
-      heading: Cesium.Math.toRadians(20.0),
-      pitch: Cesium.Math.toRadians(-90.0),
-      roll: 0
-    },
-    duration: 5
-  });
   class RadarScanMaterialProperty {
     constructor(options) {
       this._definitionChanged = new Cesium.Event();
@@ -119,5 +110,6 @@ return material;
       outlineColor: new Cesium.Color(1.0, 1.0, 0.0, 1.0)
     }
   });
+  viewer.zoomTo(rader);
 };
 export default AddTiandituWmts;

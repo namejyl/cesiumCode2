@@ -97,7 +97,7 @@ const ScanningCircle = () => {
   });
 
   // 扫描圆
-  window.viewer.entities.add({
+  let entity = window.viewer.entities.add({
     position: Cesium.Cartesian3.fromDegrees(x, y),
     id: 'scanningCircleTest',
     name: '扫描圆',
@@ -110,14 +110,6 @@ const ScanningCircle = () => {
       })
     }
   });
-  window.viewer.camera.flyTo({
-    destination: Cesium.Cartesian3.fromDegrees(x, y, 15000.0), // 设置位置
-    orientation: {
-      heading: Cesium.Math.toRadians(20.0),
-      pitch: Cesium.Math.toRadians(-90.0),
-      roll: 0
-    },
-    duration: 5
-  });
+  viewer.zoomTo(entity);
 };
 export default ScanningCircle;

@@ -15,6 +15,7 @@ const RotateCircle = () => {
       })
     }
   });
+  viewer.zoomTo(circleRotate);
   rotateMaterial(circleRotate.ellipse, 0, 1);
   /**
    * @description: 旋转材质
@@ -33,15 +34,5 @@ const RotateCircle = () => {
       return Cesium.Math.toRadians(_stRotation);
     }, false);
   }
-
-  window.viewer.camera.flyTo({
-    destination: Cesium.Cartesian3.fromDegrees(x, y, 15000.0), // 设置位置
-    orientation: {
-      heading: Cesium.Math.toRadians(20.0),
-      pitch: Cesium.Math.toRadians(-90.0),
-      roll: 0
-    },
-    duration: 5
-  });
 };
 export default RotateCircle;

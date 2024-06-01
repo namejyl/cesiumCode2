@@ -13,7 +13,7 @@ const InduationAnalysis = () => {
   let speed = 0.2;
   speed = (speed * (targertWaterHeight - waterHeight)) / 1000;
   var viewer = window.viewer;
-  viewer.entities.add({
+  let entity = viewer.entities.add({
     id: 'induationAnalysis',
     polygon: {
       hierarchy: new Cesium.PolygonHierarchy(Cesium.Cartesian3.fromDegreesArray(positions)),
@@ -29,15 +29,6 @@ const InduationAnalysis = () => {
       material: new Cesium.Color.fromBytes(64, 157, 253, 150)
     }
   });
-
-  viewer.camera.flyTo({
-    destination: Cesium.Cartesian3.fromDegrees(117.199818, 36.348001, 15000.0), // 设置位置
-    orientation: {
-      heading: Cesium.Math.toRadians(20.0),
-      pitch: Cesium.Math.toRadians(-90.0),
-      roll: 0
-    },
-    duration: 5
-  });
+  viewer.zoomTo(entity);
 };
 export default InduationAnalysis;

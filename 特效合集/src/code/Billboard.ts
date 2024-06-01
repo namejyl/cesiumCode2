@@ -6,15 +6,6 @@ const Billboard = () => {
   let name = '泰山火车站';
   let color = 'blue';
   var viewer = window.viewer;
-  window.viewer.camera.flyTo({
-    destination: Cesium.Cartesian3.fromDegrees(lon, lat, 15000.0), // 设置位置
-    orientation: {
-      heading: Cesium.Math.toRadians(20.0),
-      pitch: Cesium.Math.toRadians(-90.0),
-      roll: 0
-    },
-    duration: 5
-  });
   viewer.entities.add({
     name: name,
     id: 'billboard',
@@ -52,7 +43,7 @@ const Billboard = () => {
   });
 
   // 画点
-  viewer.entities.add({
+  let entity = viewer.entities.add({
     id: 'billboard_point',
     // 给初始点位设置一定的离地高度，否者会被压盖
     position: Cesium.Cartesian3.fromDegrees(lon, lat, 5),
@@ -61,5 +52,6 @@ const Billboard = () => {
       pixelSize: 15
     }
   });
+  viewer.zoomTo(entity);
 };
 export default Billboard;

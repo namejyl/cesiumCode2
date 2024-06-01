@@ -9,15 +9,6 @@ const RegularPolygonDiffusionWall = () => {
     minRadius: 50
   };
   RegularPolygonDiffusionWallFn(options);
-  window.viewer.camera.flyTo({
-    destination: Cesium.Cartesian3.fromDegrees(117.141411, 36.199445, 15000.0), // 设置位置
-    orientation: {
-      heading: Cesium.Math.toRadians(20.0),
-      pitch: Cesium.Math.toRadians(-90.0),
-      roll: 0
-    },
-    duration: 5
-  });
 };
 export default RegularPolygonDiffusionWall;
 /**
@@ -125,7 +116,7 @@ function RegularPolygonDiffusionWallFn(options) {
     return positions;
   }
   // 添加多边形
-  _viewer.entities.add({
+  let entity = _viewer.entities.add({
     id: 'RegularPolygonDiffusionWall',
     wall: {
       // callbackProperty回调函数，实时更新
@@ -149,4 +140,5 @@ function RegularPolygonDiffusionWallFn(options) {
       })
     }
   });
+  viewer.zoomTo(entity);
 }

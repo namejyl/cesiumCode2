@@ -10,15 +10,6 @@ const FlowWall = () => {
       array.push(list[i][1]);
     }
     FlowWallFn(array);
-    window.viewer.camera.flyTo({
-      destination: Cesium.Cartesian3.fromDegrees(117.12104, 36.178308, 15000.0), // 设置位置
-      orientation: {
-        heading: Cesium.Math.toRadians(20.0),
-        pitch: Cesium.Math.toRadians(-90.0),
-        roll: 0
-      },
-      duration: 5
-    });
   });
 };
 export default FlowWall;
@@ -102,7 +93,7 @@ function FlowWallFn(polygonArray) {
       viewer.entities.remove(viewer.entities.values[i]);
     }
   }
-  viewer.entities.add({
+  let entity = viewer.entities.add({
     name: '流动墙效果',
     id: 'flowWall',
     wall: {
@@ -116,4 +107,5 @@ function FlowWallFn(polygonArray) {
       })
     }
   });
+  viewer.zoomTo(entity);
 }

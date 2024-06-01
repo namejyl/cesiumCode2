@@ -7,5 +7,6 @@ declare global {
     Viewer: any;
     viewer: any;
     tiandituToken: any;
+    echarts: any;
   }
 }

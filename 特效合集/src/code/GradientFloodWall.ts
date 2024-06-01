@@ -10,15 +10,6 @@ const GradientFloodWall = () => {
     }
     GradientFloodWallFn(array);
   });
-  window.viewer.camera.flyTo({
-    destination: Cesium.Cartesian3.fromDegrees(117.12104, 36.178308, 15000.0), // 设置位置
-    orientation: {
-      heading: Cesium.Math.toRadians(20.0),
-      pitch: Cesium.Math.toRadians(-90.0),
-      roll: 0
-    },
-    duration: 5
-  });
 };
 export default GradientFloodWall;
 
@@ -97,7 +88,7 @@ function GradientFloodWallFn(positions) {
   });
 
   // 绘制墙体
-  window.viewer.entities.add({
+  let entity = window.viewer.entities.add({
     name: '立体墙效果',
     id: 'GradientFloodWall',
     wall: {
@@ -111,4 +102,5 @@ function GradientFloodWallFn(positions) {
       })
     }
   });
+  viewer.zoomTo(entity);
 }

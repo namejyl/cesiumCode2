@@ -367,7 +367,13 @@ const listData = reactive<any>([
       },
       {
         value: '等高线',
-        label: '等高线'
+        label: '等高线',
+        code: 'AddContourLines'
+      },
+      {
+        value: '带参数等高线',
+        label: '带参数等高线',
+        code: 'AddContourLinesRender'
       },
       {
         value: '剖面分析',
@@ -392,10 +398,6 @@ const listData = reactive<any>([
       {
         value: '立体热力图',
         label: '立体热力图'
-      },
-      {
-        value: 'threejs+cesium',
-        label: 'threejs+cesium'
       }
 
       //   {
@@ -410,19 +412,23 @@ const listData = reactive<any>([
     children: [
       {
         value: '下雪天效果',
-        label: '下雪天效果'
+        label: '下雪天效果',
+        code: 'SnowEffect'
       },
       {
         value: '下雨天效果',
-        label: '下雨天效果'
+        label: '下雨天效果',
+        code: 'RainEffect'
       },
       {
         value: '雾天效果',
-        label: '雾天效果'
+        label: '雾天效果',
+        code: 'FogEffect'
       },
       {
         value: '粒子特效',
-        label: '粒子特效'
+        label: '粒子特效',
+        code: 'ParticleEffect'
       }
     ]
   },
@@ -431,38 +437,29 @@ const listData = reactive<any>([
     label: '第三方支持',
     children: [
       {
-        value: 'threejs',
-        label: 'threejs'
-      },
-      {
         value: 'Echarts-饼图',
-        label: 'Echarts-饼图'
+        label: 'Echarts-饼图',
+        code: 'PieEcharts'
       },
       {
         value: 'Echarts-散点图',
-        label: 'Echarts-散点图'
+        label: 'Echarts-散点图',
+        code: 'ScatterEcharts'
       },
       {
-        value: 'Echarts-飞行路线图',
-        label: 'Echarts-飞行路线图'
-      },
-      {
-        value: 'Echarts-流入图',
-        label: 'Echarts-流入图'
-      },
-      {
-        value: 'Echarts-基础柱状图',
-        label: 'Echarts-基础柱状图'
-      },
-      {
-        value: 'Echarts-光柱柱状图',
-        label: 'Echarts-光柱柱状图'
+        value: 'Echarts-柱状图',
+        label: 'Echarts-柱状图',
+        code: 'BarEcharts'
       }
     ]
   }
 ]);
 const SettingCesiumFn = async (code: any) => {
-  CesiumMap[code]();
+  window.Viewer.entities.removeAll();
+  window.Viewer.camera.flyHome(0);
+  setTimeout(() => {
+    CesiumMap[code]();
+  }, 1000);
 };
 </script>
 

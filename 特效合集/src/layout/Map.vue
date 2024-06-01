@@ -13,7 +13,7 @@ import { onMounted, ref } from 'vue';
 import PlottingTool from '../components/PlottingTool.vue';
 const Cesium = window.Cesium;
 const PlottingToolShow = ref(false);
-let viewer;
+let viewer: any;
 onMounted(() => {
   // let key = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJiYjUwNWQyOC0yZmZhLTRmMzItOTQyZC02ZmQyMWIyMTA3NmEiLCJpZCI6NjcyNzcsImlhdCI6MTY2ODE1ODc2Mn0.t1h6-ZADkGnZUZZoLtrlgtTp8_MR2Kxfhew42ksDgmk';
   // Cesium.Ion.defaultAccessToken = key;

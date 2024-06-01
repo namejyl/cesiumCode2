@@ -6,15 +6,6 @@ const AddTiandituWmts = () => {
     color: new Cesium.Color(1.0, 1.0, 0.0, 0.3),
     speed: 2.0
   };
-  window.viewer.camera.flyTo({
-    destination: Cesium.Cartesian3.fromDegrees(117.141411, 36.19, 15000.0), // 设置位置
-    orientation: {
-      heading: Cesium.Math.toRadians(20.0),
-      pitch: Cesium.Math.toRadians(-90.0),
-      roll: 0
-    },
-    duration: 5
-  });
   var viewer = window.viewer;
   window.viewer = viewer;
   // 半径
@@ -28,7 +19,7 @@ const AddTiandituWmts = () => {
   let _cenLat = options.position[1];
 
   // 先建立椭球体
-  window.viewer.entities.add({
+  let entity = window.viewer.entities.add({
     position: new Cesium.Cartesian3.fromDegrees(_cenLon, _cenLat),
     name: '立体雷达扫描',
     id: 'stereoRadarScanning',
@@ -40,7 +31,7 @@ const AddTiandituWmts = () => {
       outlineWidth: 1
     }
   });
-
+  viewer.zoomTo(entity);
   let heading = 0;
   let positionArr: any = [];
   // 每一帧刷新时调用

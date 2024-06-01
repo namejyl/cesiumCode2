@@ -40,15 +40,7 @@ const RotateEntity = () => {
       '</td></tr>' +
       '</tbody></table></div>'
   });
-  viewer.camera.flyTo({
-    destination: Cesium.Cartesian3.fromDegrees(117.118611, 36.193258, 15000.0), // 设置位置
-    orientation: {
-      heading: Cesium.Math.toRadians(20.0),
-      pitch: Cesium.Math.toRadians(-90.0),
-      roll: 0
-    },
-    duration: 5 // 设置飞行持续时间，默认会根据距离来计算
-  });
+  viewer.zoomTo(ellipseRotate);
   RotateEntityFn(ellipseRotate.ellipse, 0, 1);
 };
 export default RotateEntity;

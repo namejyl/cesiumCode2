@@ -10,16 +10,6 @@ const DynamicWall = () => {
       array.push(list[i][1]);
     }
     DynamicWallFn(array);
-
-    window.viewer.camera.flyTo({
-      destination: Cesium.Cartesian3.fromDegrees(117.233478, 36.309579, 15000.0), // 设置位置
-      orientation: {
-        heading: Cesium.Math.toRadians(20.0),
-        pitch: Cesium.Math.toRadians(-90.0),
-        roll: 0
-      },
-      duration: 5
-    });
   });
 };
 export default DynamicWall;
@@ -114,7 +104,7 @@ function DynamicWallFn(polygonArray) {
     }
   }
   // 绘制墙体
-  viewer.entities.add({
+  let entity = viewer.entities.add({
     name: '立体墙效果',
     id: 'dynamicWall',
     wall: {
@@ -128,4 +118,5 @@ function DynamicWallFn(polygonArray) {
       })
     }
   });
+  viewer.zoomTo(entity);
 }

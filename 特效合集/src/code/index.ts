@@ -53,8 +53,17 @@ import AddCesiumglb from './AddCesiumglb.ts';
 import TrajectoryMovement from './TrajectoryMovement.ts';
 import PointClustering from './PointClustering.ts';
 import InduationAnalysis from './InduationAnalysis.ts';
-import VisibilityAnalysis from './VisibilityAnalysis.ts';
 import ViewshedAnalysis from './ViewshedAnalysis.ts';
+import AddContourLines from './AddContourLines.ts';
+import VisibilityAnalysis from './VisibilityAnalysis.ts';
+import AddContourLinesRender from './AddContourLinesRender.ts';
+import SnowEffect from './SnowEffect.ts';
+import RainEffect from './RainEffect.ts';
+import FogEffect from './FogEffect.ts';
+import ParticleEffect from './ParticleEffect.ts';
+import PieEcharts from './PieEcharts.ts';
+import ScatterEcharts from './ScatterEcharts.ts';
+import BarEcharts from './BarEcharts.ts';
 const CesiumMap: any = {
   AddTiandituWmts,
   AddXyz,
@@ -111,7 +120,16 @@ const CesiumMap: any = {
   TrajectoryMovement,
   PointClustering,
   InduationAnalysis,
+  ViewshedAnalysis,
+  AddContourLines,
+  AddContourLinesRender,
   VisibilityAnalysis,
-  ViewshedAnalysis
+  SnowEffect,
+  RainEffect,
+  FogEffect,
+  ParticleEffect,
+  PieEcharts,
+  ScatterEcharts,
+  BarEcharts
 };
 export default CesiumMap;

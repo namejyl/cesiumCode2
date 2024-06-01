@@ -11,7 +11,7 @@ const AddCesium3DTileset2 = () => {
       url: Cesium.IonResource.fromAssetId(75343)
     })
   );
-  tileset.tileVisible.addEventListener(function (tile) {
+  tileset.tileVisible.addEventListener(function (tile: any) {
     let content = tile.content;
     let featuresLength = content.featuresLength;
     for (let i = 0; i < featuresLength; i += 2) {

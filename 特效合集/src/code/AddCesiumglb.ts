@@ -6,16 +6,6 @@ const AddCesiumglb = () => {
    * @param {Number} y 纬度
    * @param {Number} z 高度
    */
-  window.viewer.camera.flyTo({
-    destination: Cesium.Cartesian3.fromDegrees(-123.0744619, 44.0503706, 15000.0), // 设置位置
-    orientation: {
-      heading: Cesium.Math.toRadians(20.0),
-      pitch: Cesium.Math.toRadians(-90.0),
-      roll: 0
-    },
-    duration: 5
-  });
-  //   this.$cesiumEarth.AddCesiumglb(117.102442, 36.185321, 4000);
   var viewer = window.viewer;
 
   // Load a GLB model
@@ -37,7 +27,7 @@ const AddCesiumglb = () => {
       maximumScale: 20000
     }
   });
-
+  viewer.zoomTo(model);
   // Keyboard control for model orientation
   let modelHeading = heading;
   let modelPitch = pitch;
