@@ -1,5 +1,5 @@
 const Cesium = window.Cesium;
-const InitColorfulRectEarth = () => {
+export default () => {
   let viewer = window.Viewer;
   let instances = [];
   for (let lon = -180.0; lon < 180.0; lon += 5.0) {
@@ -27,4 +27,3 @@ const InitColorfulRectEarth = () => {
     })
   );
 };
-export default InitColorfulRectEarth;

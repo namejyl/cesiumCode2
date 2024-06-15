@@ -1,5 +1,5 @@
 const Cesium = window.Cesium;
-const TrajectoryMovement = () => {
+export default () => {
   var data = [
     {
       x: 117.102442,
@@ -109,4 +109,3 @@ const TrajectoryMovement = () => {
     }
   });
 };
-export default TrajectoryMovement;

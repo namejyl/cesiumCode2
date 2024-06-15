@@ -1,5 +1,5 @@
 const Cesium = window.Cesium;
-const PieEcharts = () => {
+export default () => {
   viewer.camera.flyTo({
     destination: Cesium.Cartesian3.fromDegrees(116.19777, 39.03883, 100000.0)
   });
@@ -66,4 +66,3 @@ const PieEcharts = () => {
     return criclePrimitive;
   }
 };
-export default PieEcharts;

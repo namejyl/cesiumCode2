@@ -1,33 +1,20 @@
 const Cesium = window.Cesium;
-const AddContourLines = () => {
+export default () => {
   let viewer = window.viewer;
-  // 要绘制的目标高度
-  var height = 1000.0;
-  // 创建一个Entity来表示我们的等高线（这里只是为了可视化，实际上不需要这个）
-  var entity = viewer.entities.add({
-    name: '等高线',
-    polyline: {
-      positions: Cesium.Cartesian3.fromDegreesArrayHeights([
-        // 这里填入经纬度数组，表示等高线的路径
-      ]),
-      width: 3.0,
-      material: Cesium.Color.RED
-    }
-  });
-  // 计算等高线的经纬度数组
-  var positions = [];
-  var terrainProvider = viewer.terrainProvider;
-  var scene = viewer.scene;
-  Cesium.sampleTerrain(terrainProvider, 11, [Cesium.Cartographic.fromDegrees(-75.0, 40.0), Cesium.Cartographic.fromDegrees(-125.0, 40.0)]).then(function (updatedPositions) {
-    for (var i = 0; i < updatedPositions.length; i++) {
-      var cartographic = updatedPositions[i];
-      if (Cesium.defined(cartographic)) {
-        cartographic.height = height;
-        positions.push(cartographic);
-      }
-    }
-    // 更新Entity的polyline.positions
-    entity.polyline.positions = positions;
-  });
+  // 获取场景对象
+  let globe = viewer.scene.globe;
+  // 等高线材质的uniforms
+  let contourUniforms = {};
+  // 使用等高线材质
+  let material = Cesium.Material.fromType('ElevationContour');
+  // 获取材质中的uniforms
+  contourUniforms = material.uniforms;
+  // 线宽2.0px
+  contourUniforms.width = 2.0;
+  // 高度间隔为150米
+  contourUniforms.spacing = 150;
+  // 等高线颜色为红色
+  contourUniforms.color = Cesium.Color.RED;
+  // 设置材质
+  globe.material = material;
 };
-export default AddContourLines;

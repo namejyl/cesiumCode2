@@ -1,5 +1,5 @@
 const Cesium = window.Cesium;
-const WavyCircle = () => {
+export default () => {
   let x = 117.141411;
   let y = 36.19;
   // 材质
@@ -144,4 +144,3 @@ const WavyCircle = () => {
     duration: 5
   });
 };
-export default WavyCircle;

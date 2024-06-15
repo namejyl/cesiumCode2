@@ -1,5 +1,5 @@
 const Cesium = window.Cesium;
-const AddTiandituWmts = () => {
+export default () => {
   // 材质
   let x = 117.141411;
   let y = 36.19;
@@ -189,4 +189,3 @@ return material;
   // 中心点坐标、颜色、半径、持续时间
   scanLine1.add([x, y, z], '#CE1374', 1200, 15);
 };
-export default AddTiandituWmts;

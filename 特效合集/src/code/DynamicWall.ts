@@ -1,7 +1,7 @@
 const Cesium = window.Cesium;
 import colorsImg from '/static/colors.png';
 import axios from 'axios';
-const DynamicWall = () => {
+export default () => {
   axios.get('/static/geojson/岱岳区水域.geojson').then(res => {
     let array = [];
     let list = res.data.features[200].geometry.coordinates[0][0];
@@ -12,7 +12,6 @@ const DynamicWall = () => {
     DynamicWallFn(array);
   });
 };
-export default DynamicWall;
 
 /**
  * 动态立体墙效果

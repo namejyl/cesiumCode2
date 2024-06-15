@@ -1,5 +1,5 @@
 const Cesium = window.Cesium;
-const AddContourLinesRender = () => {
+export default () => {
   /**
    * 添加等高线(渲染)
    * @param {*} viewModel  等高线参数
@@ -161,4 +161,3 @@ const AddContourLinesRender = () => {
   });
   viewer.scene.globe.material = material;
 };
-export default AddContourLinesRender;

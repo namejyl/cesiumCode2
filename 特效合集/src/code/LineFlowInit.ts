@@ -1,5 +1,5 @@
 const Cesium = window.Cesium;
-const LineFlowInit = () => {
+export default () => {
   let list = [];
   let position = [117.123076, 36.214848];
   let num = 120;
@@ -11,7 +11,6 @@ const LineFlowInit = () => {
   }
   LineFlowInitFn(list);
 };
-export default LineFlowInit;
 
 /**
  * 竖直飞线效果

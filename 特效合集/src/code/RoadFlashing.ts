@@ -1,5 +1,5 @@
 const Cesium = window.Cesium;
-const RoadFlashing = () => {
+export default () => {
   var viewer = window.Viewer;
   // 道路闪烁线
   Cesium.GeoJsonDataSource.load('/static/geojson/泰山区道路.geojson').then(function (dataSource) {
@@ -93,4 +93,3 @@ const RoadFlashing = () => {
     }
   });
 };
-export default RoadFlashing;

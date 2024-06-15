@@ -1,5 +1,5 @@
 const Cesium = window.Cesium;
-const InduationAnalysis = () => {
+export default () => {
   /**
    * 空间分析-淹没分析
    * @param {Array} positions 位置数组
@@ -31,4 +31,3 @@ const InduationAnalysis = () => {
   });
   viewer.zoomTo(entity);
 };
-export default InduationAnalysis;

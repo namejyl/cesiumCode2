@@ -1,6 +1,6 @@
 const Cesium = window.Cesium;
 // 天空盒背景图必须是 正方形！！！
-const CustomSkyBox = () => {
+export default () => {
   var viewer = window.Viewer;
   viewer.scene.skyBox = new Cesium.SkyBox({
     sources: {
@@ -13,4 +13,3 @@ const CustomSkyBox = () => {
     }
   });
 };
-export default CustomSkyBox;

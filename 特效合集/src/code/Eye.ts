@@ -1,9 +1,8 @@
 const Cesium = window.Cesium;
-const Eye = () => {
+export default() => {
   let viewer = window.Viewer;
   new EyeClass(viewer, Cesium);
 };
-export default Eye;
 
 class EyeClass {
   Cesium: any;

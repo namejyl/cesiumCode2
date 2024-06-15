@@ -1,12 +1,11 @@
 const Cesium = window.Cesium;
-const Rotate = async () => {
+export default async () => {
   let viewer = window.Viewer;
   StartRotate(viewer, Cesium);
   setTimeout(async () => {
     StopRotate(viewer, Cesium);
   }, 10000);
 };
-export default Rotate;
 function StartRotate(viewer: any, Cesium: any) {
   // 启动时钟动画
   viewer.clock.shouldAnimate = true;

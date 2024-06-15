@@ -1,7 +1,7 @@
 const Cesium = window.Cesium;
 import arrowImg from '/static/arrow.png';
 import axios from 'axios';
-const FlowWall = () => {
+export default () => {
   axios.get('/static/geojson/财源街道边界.geojson').then(res => {
     let array = [];
     let list = res.data.features[0].geometry.coordinates[0][0];
@@ -12,7 +12,6 @@ const FlowWall = () => {
     FlowWallFn(array);
   });
 };
-export default FlowWall;
 
 /**
  * 动态流动墙体效果

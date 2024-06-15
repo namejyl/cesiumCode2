@@ -1,6 +1,6 @@
 const Cesium = window.Cesium;
 import axios from 'axios';
-const GradientFloodWall = () => {
+export default () => {
   axios.get('/static/geojson/财源街道边界.geojson').then(res => {
     let array = [];
     let list = res.data.features[0].geometry.coordinates[0][0];
@@ -11,7 +11,6 @@ const GradientFloodWall = () => {
     GradientFloodWallFn(array);
   });
 };
-export default GradientFloodWall;
 
 /**
  * 立体墙（垂直、水平）渐变泛光效果

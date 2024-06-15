@@ -1,5 +1,5 @@
 const Cesium = window.Cesium;
-const RotateEntity = () => {
+export default () => {
   let viewer = window.Viewer;
   let entityData = {
     name: '旋转椭圆',
@@ -43,7 +43,6 @@ const RotateEntity = () => {
   viewer.zoomTo(ellipseRotate);
   RotateEntityFn(ellipseRotate.ellipse, 0, 1);
 };
-export default RotateEntity;
 
 function RotateEntityFn(instance: any, _rotation: any, _amount: any) {
   instance.rotation = new Cesium.CallbackProperty(function () {

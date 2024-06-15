@@ -1,5 +1,5 @@
 const Cesium = window.Cesium;
-const AddTiandituWmts = () => {
+export default () => {
   let viewer = window.Viewer;
   // var osmProvider = new Cesium.UrlTemplateImageryProvider({
   //   url: "https://tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -10,4 +10,3 @@ const AddTiandituWmts = () => {
   });
   viewer.imageryLayers.addImageryProvider(imageryProvider);
 };
-export default AddTiandituWmts;

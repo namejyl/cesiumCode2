@@ -1,5 +1,5 @@
 const Cesium = window.Cesium;
-const SnowEffect = () => {
+export default () => {
   let snowStage = null;
   var viewer = window.viewer;
   let option = {
@@ -59,4 +59,3 @@ const SnowEffect = () => {
   });
   viewer.scene.postProcessStages.add(snowStage);
 };
-export default SnowEffect;

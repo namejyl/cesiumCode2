@@ -1,5 +1,5 @@
 const Cesium = window.Cesium;
-const AddTiandituWmts = () => {
+export default () => {
   let options = {
     position: [117.141411, 36.19],
     radius: 1000.0,
@@ -83,4 +83,3 @@ const AddTiandituWmts = () => {
     return positionArr;
   }
 };
-export default AddTiandituWmts;

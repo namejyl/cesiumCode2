@@ -1,5 +1,5 @@
 const Cesium = window.Cesium;
-const SunShadows = () => {
+export default () => {
   var viewer = window.Viewer;
   // 加载模型
   const position = Cesium.Cartesian3.fromDegrees(-123.0744619, 44.0503706, 5000.0);
@@ -32,4 +32,3 @@ const SunShadows = () => {
   viewer.shadows = true;
   viewer.clock.multiplier = 1500;
 };
-export default SunShadows;

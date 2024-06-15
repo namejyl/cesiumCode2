@@ -1,6 +1,6 @@
 const Cesium = window.Cesium;
 import axios from 'axios';
-const DrawWall = () => {
+export default () => {
   axios.get('/static/geojson/岱岳区水域.geojson').then(res => {
     let array = [];
     let list = res.data.features[200].geometry.coordinates[0][0];
@@ -20,7 +20,6 @@ const DrawWall = () => {
     });
   });
 };
-export default DrawWall;
 
 /**
  * 绘制墙

@@ -2,7 +2,7 @@ const Cesium = window.Cesium;
 import fire1Img from '/static/fire1.png';
 import waterImg from '/static/water.png';
 import explosionImg from '/static/explosion.png';
-const ParticleEffect = () => {
+export default () => {
   /**
    * 粒子效果
    * @param {Number} x 经度
@@ -148,4 +148,3 @@ const ParticleEffect = () => {
     viewer.entities.remove(entity); //删除entity
   }
 };
-export default ParticleEffect;

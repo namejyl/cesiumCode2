@@ -1,7 +1,7 @@
 const Cesium = window.Cesium;
 import axios from 'axios';
 //地图反选遮罩（地图掩模）
-const Mask = () => {
+export default () => {
   let viewer = window.Viewer;
   let areaJson: any = null;
   axios
@@ -54,4 +54,3 @@ const Mask = () => {
       viewer.flyTo(lineEntity);
     });
 };
-export default Mask;

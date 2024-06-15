@@ -1,6 +1,6 @@
 const Cesium = window.Cesium;
 import radarImg from '/static/radar.png';
-const AddTiandituWmts = () => {
+export default () => {
   let x = 117.141411;
   let y = 36.19;
   let z = 0;
@@ -42,4 +42,3 @@ const AddTiandituWmts = () => {
     }, false);
   }
 };
-export default AddTiandituWmts;

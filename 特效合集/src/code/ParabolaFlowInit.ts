@@ -1,10 +1,9 @@
 const Cesium = window.Cesium;
-const ParabolaFlowInit = () => {
+export default () => {
   let center = [117.123076, 36.214848];
   let num = 20;
   ParabolaFlowInitFn(center, num);
 };
-export default ParabolaFlowInit;
 
 /**
  * 抛物流动飞线效果

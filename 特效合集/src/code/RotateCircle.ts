@@ -1,6 +1,6 @@
 const Cesium = window.Cesium;
 import circle_rotateImg from '/static/circle_rotate.png';
-const RotateCircle = () => {
+export default () => {
   let x = 117.141411;
   let y = 36.19;
   // 旋转圆
@@ -35,4 +35,3 @@ const RotateCircle = () => {
     }, false);
   }
 };
-export default RotateCircle;

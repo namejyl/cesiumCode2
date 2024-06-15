@@ -1,5 +1,5 @@
 const Cesium = window.Cesium;
-const Split = () => {
+export default () => {
   document.getElementById('slider').style.display = 'block';
   const viewer = window.Viewer;
   const layers = viewer.imageryLayers;
@@ -37,4 +37,3 @@ const Split = () => {
     moveActive = false;
   }, Cesium.ScreenSpaceEventType.PINCH_END);
 };
-export default Split;

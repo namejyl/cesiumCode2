@@ -64,6 +64,11 @@ import ParticleEffect from './ParticleEffect.ts';
 import PieEcharts from './PieEcharts.ts';
 import ScatterEcharts from './ScatterEcharts.ts';
 import BarEcharts from './BarEcharts.ts';
+import ProfileAnalysis from './ProfileAnalysis.ts';
+import Excavation from './Excavation.ts';
+import GeneratingTriangulation from './GeneratingTriangulation.ts';
+import ThermalMap from './ThermalMap.ts'
+import ThermalMap_3D from './ThermalMap_3D.ts'
 const CesiumMap: any = {
   AddTiandituWmts,
   AddXyz,
@@ -130,6 +135,11 @@ const CesiumMap: any = {
   ParticleEffect,
   PieEcharts,
   ScatterEcharts,
-  BarEcharts
+  BarEcharts,
+  ProfileAnalysis,
+  Excavation,
+  GeneratingTriangulation,
+  ThermalMap,
+  ThermalMap_3D
 };
 export default CesiumMap;

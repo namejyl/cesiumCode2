@@ -1,5 +1,5 @@
 const Cesium = window.Cesium;
-const AddTiandituWmts = () => {
+export default () => {
   let x = 117.141411;
   let y = 36.19;
   let z = 0;
@@ -231,4 +231,3 @@ const AddTiandituWmts = () => {
   // 中心点坐标、颜色、半径、持续时间
   circleWave.add([x, y, 0], '#1FA8E3', 500, 3000);
 };
-export default AddTiandituWmts;

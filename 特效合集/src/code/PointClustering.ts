@@ -1,6 +1,6 @@
 const Cesium = window.Cesium;
 import poiImg from '/static/GreenPin1LargeB.png';
-const PointClustering = () => {
+export default () => {
   let pointArray = [];
   for (let i = 0; i < 2000; i++) {
     let x = 117.102442 + Math.random() * 0.1;
@@ -74,4 +74,3 @@ const PointClustering = () => {
     });
   });
 };
-export default PointClustering;

@@ -1,5 +1,5 @@
 const Cesium = window.Cesium;
-const SaveOutImg = () => {
+export default () => {
   let viewer = window.Viewer;
   // 获取 Canvas 元素
   let canvas = viewer.scene.canvas;
@@ -26,4 +26,3 @@ const SaveOutImg = () => {
   link.click();
   document.body.removeChild(link);
 };
-export default SaveOutImg;

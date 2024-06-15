@@ -8,7 +8,7 @@
               <el-icon><setting /></el-icon>{{ item.value }}
             </template>
             <el-menu-item-group>
-              <el-menu-item @click="SettingCesiumFn(item1.code)" v-for="(item1, index1) in item.children" :key="index1" :index="item1.value">{{ item1.value }}</el-menu-item>
+              <el-menu-item @click="SettingCesiumFn(item1.code)" v-for="(item1, index1) in item.children" :key="index1" :index="item1.value">{{ item1.value }} </el-menu-item>
             </el-menu-item-group>
           </el-sub-menu>
         </el-menu>
@@ -19,14 +19,21 @@
         <Map></Map>
       </el-main>
     </el-container>
+    <div class="button-1" v-if="indexCode" @click="ShowCodeFn">(显示/隐藏)源码</div>
+    <Codemirror v-model:value="code" v-if="ShowCode" :options="cmOptions" border class="Codemirror"></Codemirror>
   </el-container>
 </template>
 
 <script lang="ts" setup>
-import { reactive } from 'vue';
+import { reactive, ref } from 'vue';
 import { Menu as Setting } from '@element-plus/icons-vue';
 import Map from './Map.vue';
 import CesiumMap from '../code/index.ts';
+import 'codemirror/mode/javascript/javascript.js';
+import Codemirror from 'codemirror-editor-vue3';
+import axios from 'axios';
+import type { EditorConfiguration } from 'codemirror';
+const indexCode = ref('');
 const listData = reactive<any>([
   {
     value: '各类数据加载',
@@ -122,24 +129,6 @@ const listData = reactive<any>([
         value: '场景出图',
         label: '场景出图',
         code: 'SaveOutImg'
-      }
-    ]
-  },
-  {
-    value: '量测、绘制、查询',
-    label: '量测、绘制、查询',
-    children: [
-      {
-        value: '三维量测(measure)',
-        label: '三维量测(measure)'
-      },
-      {
-        value: '鼠标绘制',
-        label: '鼠标绘制'
-      },
-      {
-        value: '信息查询',
-        label: '信息查询'
       }
     ]
   },
@@ -356,12 +345,12 @@ const listData = reactive<any>([
         code: 'InduationAnalysis'
       },
       {
-        value: '通视分析',
+        value: '通视分析(暂无)',
         label: '通视分析',
         code: 'VisibilityAnalysis'
       },
       {
-        value: '可视域分析',
+        value: '可视域分析(暂无)',
         label: '可视域分析',
         code: 'ViewshedAnalysis'
       },
@@ -371,17 +360,14 @@ const listData = reactive<any>([
         code: 'AddContourLines'
       },
       {
-        value: '带参数等高线',
-        label: '带参数等高线',
-        code: 'AddContourLinesRender'
-      },
-      {
         value: '剖面分析',
-        label: '剖面分析'
+        label: '剖面分析',
+        code: 'ProfileAnalysis'
       },
       {
         value: '地形开挖',
-        label: '地形开挖'
+        label: '地形开挖',
+        code: 'Excavation'
       },
       {
         value: '填挖方计算',
@@ -389,15 +375,18 @@ const listData = reactive<any>([
       },
       {
         value: '地形三角网',
-        label: '地形三角网'
+        label: '地形三角网',
+        code: 'GeneratingTriangulation'
       },
       {
         value: '热力图',
-        label: '热力图'
+        label: '热力图',
+        code: 'ThermalMap'
       },
       {
         value: '立体热力图',
-        label: '立体热力图'
+        label: '立体热力图',
+        code: 'ThermalMap_3D'
       }
 
       //   {
@@ -457,9 +446,23 @@ const listData = reactive<any>([
 const SettingCesiumFn = async (code: any) => {
   window.Viewer.entities.removeAll();
   window.Viewer.camera.flyHome(0);
+  indexCode.value = code;
+  ShowCode.value = false;
   setTimeout(() => {
     CesiumMap[code]();
   }, 1000);
+};
+const ShowCode = ref(false);
+const code = ref(``);
+const ShowCodeFn = async () => {
+  axios.get('/src/code/' + indexCode.value + '.ts').then(res => {
+    code.value = res.data.split('//# ')[0];
+    ShowCode.value = !ShowCode.value;
+  });
+};
+const cmOptions: EditorConfiguration = {
+  mode: 'text/javascript',
+  textAlign: 'right'
 };
 </script>
 
@@ -485,5 +488,48 @@ const SettingCesiumFn = async (code: any) => {
   justify-content: center;
   height: 100%;
   right: 20px;
+}
+.Codemirror {
+  width: 600px !important;
+  height: 100% !important;
+  right: 0;
+  position: fixed;
+}
+.button-1 {
+  right: 0px;
+  bottom: 0px;
+  position: fixed;
+  z-index: 999999;
+  background-color: #ea4c89;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Haas Grot Text R Web', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 16px;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-1:hover,
+.button-1:focus {
+  background-color: #f082ac;
+}
+:deep(.CodeMirror-line) {
+  display: flex !important;
 }
 </style>

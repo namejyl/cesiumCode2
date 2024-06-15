@@ -1,6 +1,6 @@
 const Cesium = window.Cesium;
 import billbordImg from '/static/BluePin1LargeB.png';
-const Billboard = () => {
+export default () => {
   let lon = 117.102442;
   let lat = 36.185321;
   let name = '泰山火车站';
@@ -54,4 +54,3 @@ const Billboard = () => {
   });
   viewer.zoomTo(entity);
 };
-export default Billboard;

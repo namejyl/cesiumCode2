@@ -1,5 +1,5 @@
 const Cesium = window.Cesium;
-const RoadShuttle = () => {
+export default () => {
   let viewer = window.Viewer;
   // geojson数据路径
   let geojsonPath = '/static/geojson/泰山区道路.geojson';
@@ -108,4 +108,3 @@ const RoadShuttle = () => {
     duration: 5
   });
 };
-export default RoadShuttle;

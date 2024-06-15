@@ -1,5 +1,5 @@
 const Cesium = window.Cesium;
-const ScatterEcharts = () => {
+export default () => {
   viewer.camera.flyTo({
     destination: Cesium.Cartesian3.fromDegrees(116.19777, 39.03883, 100000.0)
   });
@@ -77,4 +77,3 @@ const ScatterEcharts = () => {
     return criclePrimitive;
   }
 };
-export default ScatterEcharts;

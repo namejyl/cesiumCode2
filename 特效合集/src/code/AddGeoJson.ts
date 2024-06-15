@@ -1,5 +1,5 @@
 const Cesium = window.Cesium;
-const AddGeoJson = () => {
+export default () => {
   var viewer = window.Viewer;
   Cesium.GeoJsonDataSource.load('/static/geojson/故宫.geojson')
     .then(function (data: any) {
@@ -36,4 +36,3 @@ const AddGeoJson = () => {
       // }
     });
 };
-export default AddGeoJson;

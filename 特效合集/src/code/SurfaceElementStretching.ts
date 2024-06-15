@@ -1,5 +1,5 @@
 const Cesium = window.Cesium;
-const SurfaceElementStretching = () => {
+export default () => {
   /**
    * 面状要素的立体拉伸效果
    */
@@ -28,4 +28,3 @@ const SurfaceElementStretching = () => {
     duration: 5
   });
 };
-export default SurfaceElementStretching;

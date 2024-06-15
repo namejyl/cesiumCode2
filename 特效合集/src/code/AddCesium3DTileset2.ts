@@ -1,5 +1,5 @@
 const Cesium = window.Cesium;
-const AddCesium3DTileset2 = () => {
+export default () => {
   /**
    * 添加三维模型
    * @param: style {Boolean} 是否加载渐变和动态光环
@@ -50,4 +50,3 @@ const AddCesium3DTileset2 = () => {
     }
   });
 };
-export default AddCesium3DTileset2;

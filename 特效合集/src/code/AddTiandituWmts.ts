@@ -1,5 +1,5 @@
 const Cesium = window.Cesium;
-const AddTiandituWmts = () => {
+export default () => {
   let t = window.Viewer,
     i = window.tiandituToken;
   let e = ['矢量底图', '矢量注记', '影像底图', '影像注记', '地形晕渲', '地形注记', '地形', '国界'];
@@ -82,5 +82,3 @@ const AddTiandituWmts = () => {
     }
   }
 };
-
-export default AddTiandituWmts;

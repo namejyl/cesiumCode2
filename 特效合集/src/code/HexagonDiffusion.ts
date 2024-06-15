@@ -1,6 +1,6 @@
 const Cesium = window.Cesium;
 import hexagonImg from '/static/hexagon.png';
-const HexagonDiffusion = () => {
+export default () => {
   // 点效果集合 父类
   class Effect {
     viewer;
@@ -177,4 +177,3 @@ const HexagonDiffusion = () => {
   const hexagonSpread1 = new HexagonSpread(window.viewer, 'hexagonSpred1');
   hexagonSpread1.add([113.934, 22.552, 0], '#0099BF', 1000, 7500);
 };
-export default HexagonDiffusion;

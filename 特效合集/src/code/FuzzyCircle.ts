@@ -1,5 +1,5 @@
 const Cesium = window.Cesium;
-const AddTiandituWmts = () => {
+export default () => {
   let x = 117.141411;
   let y = 36.19;
   let z = 0;
@@ -97,4 +97,3 @@ const AddTiandituWmts = () => {
   });
   viewer.zoomTo(entity);
 };
-export default AddTiandituWmts;

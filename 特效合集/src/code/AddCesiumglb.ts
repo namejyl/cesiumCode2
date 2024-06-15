@@ -1,5 +1,5 @@
 const Cesium = window.Cesium;
-const AddCesiumglb = () => {
+export default () => {
   /**
    * 添加glb模型（键盘控制移动）
    * @param {Number} x 经度
@@ -68,4 +68,3 @@ const AddCesiumglb = () => {
     }
   });
 };
-export default AddCesiumglb;

@@ -1,5 +1,5 @@
 const Cesium = window.Cesium;
-const UpdateLighting = () => {
+export default () => {
   var viewer = window.Viewer;
   // 启用光照
   viewer.scene.globe.enableLighting = true;
@@ -7,4 +7,3 @@ const UpdateLighting = () => {
   viewer.clock.shouldAnimate = true;
   viewer.clock.multiplier = 5000;
 };
-export default UpdateLighting;

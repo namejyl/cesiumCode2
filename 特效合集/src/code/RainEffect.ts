@@ -1,5 +1,5 @@
 const Cesium = window.Cesium;
-const RainEffect = () => {
+export default () => {
   /**
    * 雨天效果
    */
@@ -50,4 +50,3 @@ const RainEffect = () => {
   });
   viewer.scene.postProcessStages.add(rainStage);
 };
-export default RainEffect;

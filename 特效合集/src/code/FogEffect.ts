@@ -1,5 +1,5 @@
 const Cesium = window.Cesium;
-const FogEffect = () => {
+export default () => {
   let fogStage = null;
   var viewer = window.viewer;
   let option = {
@@ -35,4 +35,3 @@ const FogEffect = () => {
   });
   viewer.scene.postProcessStages.add(fogStage);
 };
-export default FogEffect;

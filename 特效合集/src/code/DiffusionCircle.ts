@@ -1,5 +1,5 @@
 const Cesium = window.Cesium;
-const DiffusionCircle = () => {
+export default () => {
   let x = 117.141411;
   let y = 36.19;
   // 材质
@@ -105,4 +105,3 @@ const DiffusionCircle = () => {
   });
   viewer.zoomTo(entity);
 };
-export default DiffusionCircle;

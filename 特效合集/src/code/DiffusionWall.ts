@@ -1,12 +1,11 @@
 const Cesium = window.Cesium;
 import axios from 'axios';
-const DiffusionWall = () => {
+export default () => {
   axios.get('/static/geojson/财源街道边界.geojson').then(res => {
     let list = res.data.features[0].geometry.coordinates[0];
     DiffusionWallFn(list, 2.0, 1000.0, new Cesium.Color(1.0, 1.0, 0.0, 0.7));
   });
 };
-export default DiffusionWall;
 /**
  * 动态扩散墙效果
  * @param {Array} _positions 坐标数组

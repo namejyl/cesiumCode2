@@ -1,5 +1,5 @@
 const Cesium = window.Cesium;
-const ScanningCircle = () => {
+export default () => {
   /**
    * 扫描圆
    * @param {Number} x 经度
@@ -112,4 +112,3 @@ const ScanningCircle = () => {
   });
   viewer.zoomTo(entity);
 };
-export default ScanningCircle;

@@ -1,5 +1,5 @@
 const Cesium = window.Cesium;
-const ArcSphere = () => {
+export default () => {
   let x = 117.141411;
   let y = 36.19;
   // 材质
@@ -157,4 +157,3 @@ return material;
   });
   viewer.zoomTo(entity);
 };
-export default ArcSphere;

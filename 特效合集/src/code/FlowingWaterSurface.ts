@@ -1,7 +1,7 @@
 const Cesium = window.Cesium;
 import waterNormalsImg from '/static/waterNormals.png';
 import axios from 'axios';
-const FlowingWaterSurface = () => {
+export default () => {
   // ---
   // 获取水域数据（黄前水库）
   let waterData: any = [];
@@ -18,7 +18,6 @@ const FlowingWaterSurface = () => {
       FlowingWaterSurfaceFn(waterData);
     });
 };
-export default FlowingWaterSurface;
 
 /**
  * 动态流动水面

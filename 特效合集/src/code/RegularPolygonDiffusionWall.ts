@@ -1,5 +1,5 @@
 const Cesium = window.Cesium;
-const RegularPolygonDiffusionWall = () => {
+export default () => {
   let options = {
     center: [117.141411, 36.199445],
     radius: 1000.0,
@@ -10,7 +10,6 @@ const RegularPolygonDiffusionWall = () => {
   };
   RegularPolygonDiffusionWallFn(options);
 };
-export default RegularPolygonDiffusionWall;
 /**
  * 正多边形扩散墙效果
  * @param {Object} options 参数
