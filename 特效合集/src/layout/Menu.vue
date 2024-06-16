@@ -345,7 +345,7 @@ const listData = reactive<any>([
         code: 'InduationAnalysis'
       },
       {
-        value: '通视分析(暂无)',
+        value: '通视分析',
         label: '通视分析',
         code: 'VisibilityAnalysis'
       },

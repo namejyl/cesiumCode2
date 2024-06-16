@@ -1,5 +1,3 @@
 const Cesium = window.Cesium;
-const ViewshedAnalysis = () => {
-  
-};
+const ViewshedAnalysis = () => {};
 export default ViewshedAnalysis;
